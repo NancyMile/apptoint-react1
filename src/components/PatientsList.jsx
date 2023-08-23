@@ -1,6 +1,8 @@
 const PatientsList = props => {
   return (
-    <h2>Patients List</h2>
+    <div className="w-1/2 lg:3/5">
+       <h2>Patients List</h2>
+    </div>
   )
 }
 

@@ -21,8 +21,16 @@ const Patient = ({ patient }) => {
     <p className=" font-bold mb-3 text-gray-700 uppercase">
       Symtoms: {' '}
         <span className="font-normal normal-case">{symtoms}</span>
-    </p>
-  </div>
+      </p>
+      <div className="flex justify-between mt-10">
+        <button className="py-2 px-10 bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase rounded-md" type="button">
+          Edit
+        </button>
+        <button  className="py-2 px-10 bg-red-600 hover:bg-red-700 text-white font-bold uppercase rounded-md" type="button">
+          Delete
+        </button>
+      </div>
+    </div>
   )
 }
 

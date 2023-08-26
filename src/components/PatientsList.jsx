@@ -1,5 +1,5 @@
 import Patient from "./Patient"
-const PatientsList = ({ setPatient, patients }) => {
+const PatientsList = ({ setPatient, patients, EliminarPatient }) => {
 
   //console.log(patients && patients.length);
   return (
@@ -14,6 +14,7 @@ const PatientsList = ({ setPatient, patients }) => {
             key={patient.id}
             patient={patient}
             setPatient={setPatient}
+            EliminarPatient={EliminarPatient}
           />
         ))}
       </>

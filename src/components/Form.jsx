@@ -93,7 +93,7 @@ const Form = ({ patients, setPatients, patient }) => {
           <label htmlFor="symptoms" className="block text-gray-700 uppercase font-bold">Symptoms:</label>
           <textarea id="symptoms" value={symtoms} onChange={(e) => { setSymtoms(e.target.value)}} placeholder="symptoms" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"/>
         </div>
-        <input type="submit" value="Add Patient" className="bg-indigo-600 w-full cursor-pointer hover:bg-indigo-700 p-3 text-white uppercase font-bold" />
+        <input type="submit" value={patient.id ? 'Edit Patient' : 'Create patient'} className="bg-indigo-600 w-full cursor-pointer hover:bg-indigo-700 p-3 text-white uppercase font-bold" />
       </form>
       </div>
   )

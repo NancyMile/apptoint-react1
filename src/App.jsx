@@ -9,8 +9,17 @@ function App() {
   const [patient, setpatient] = useState({});
 
   useEffect(() => {
+    const getLS = () => {
+      const patientsLS = JSON.parse(localStorage.getItem('patients')) ?? [];
+     // console.log('get patients', patientsLS);
+      setPatients(patientsLS);
+    }
+    getLS();
+  },[]);
+
+  useEffect(() => {
     localStorage.setItem('patients', JSON.stringify(patients));
-  },[patients])
+  },[patients]);
 
   const EliminarPatient = (id) => {
     console.log('eliminate patient', id);
